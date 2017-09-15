@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css"	href="index.css" />
+		<script>
+			function t(s){
+				dg = "#c4aa00";
+				lg = "#ffe766"
+				switch (s){
+					case 'Home':
+						z(s, lg, dg, dg, dg, dg, dg, '<iframe src="home.html" />');
+						break;
+					case 'Teacher Info':
+						z(s, dg, lg, dg, dg, dg, dg, '<iframe src="teacher.html" />');
+						break;
+					case "Lunch Menu":
+						z(s, dg, dg, lg, dg, dg, dg, '<iframe src="lunch.html" />');
+						break;
+					case "Events/Activities":
+						z(s, dg, dg, dg, lg, dg, dg, '<iframe src="events.html" />');
+						break;
+					case "District Facebook":
+						z(s, dg, dg, dg, dg, lg, dg, pgc);
+						break;
+					case "Tolleson Website":
+						z(s, dg, dg, dg, dg, dg, lg, '<iframe src="http://tuhs.tuhsd.org" id="tuhs"/>');
+						break;
+				}
+				document.getElementById("drawer-toggle").checked = false;
+			}
+			
+			function z(s, b1, b2, b3, b4, b5, b6, pgc){
+				document.getElementById('h').innerHTML = s;
+				document.getElementById("ho").style.background = b1;
+				document.getElementById("te").style.background = b2;
+				document.getElementById("lu").style.background = b3;
+				document.getElementById("ev").style.background = b4;
+				//document.getElementById("df").style.background = b5;
+				document.getElementById("tw").style.background = b6;
+				document.getElementById("page-content").innerHTML = pgc;
+			}
+			
+		</script>
+	</head>
+	
+	<body>	
+		<input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
+		<label for="drawer-toggle" id="drawer-toggle-label"></label>
+		<header id="h">Home</header>
+		<nav id="drawer">
+			<ul>
+				<li><a onclick="t('Home')" id="ho">Home</a></li>
+				<hr />
+				<li><a onclick="t('Teacher Info')" id="te">Teacher Info</a></li>
+				<hr />
+				<li><a onclick="t('Lunch Menu')" id="lu">Lunch Menu</a></li>
+				<hr />
+				<li><a onclick="t('Events/Activities')" id="ev">Events/Activities</a></li>
+				<hr />
+				<li><a onclick="t('Tolleson Website')" id="tw">Tolleson Website</a></li>
+			</ul>
+		</nav>
+	
+		<div id="page-content">
+			<iframe src="home.html" name="content" />
+		</div>
+	</body>
+</html>

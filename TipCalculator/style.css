@@ -1,0 +1,15 @@
+.float-right{
+  float: right;
+}
+h1{
+  display: inline-block;
+}
+h3{
+  padding-top: 10px;
+}
+#backwaiter_container, #results-page{
+  padding-bottom: 60px; 
+}
+#results-page, .editData{
+  display: none;
+}

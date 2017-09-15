@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="TipEngine.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tip Calculator</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div id="calc-page">
+            <div class="page-header">
+                <h1>Tip Pool</h1>
+                <h3 class="float-right glyphicon glyphicon-chevron-up toggleTipPool" role="button" data-toggle="collapse" href="#tipPool_container"
+                    aria-expanded="true" aria-controls="tipPool_container"></h3>
+            </div>
+
+            <div id="tipPool_container" class="collapse in">
+                <div class="jumbotron">
+                    <form class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="number" id="tipPool" class="form-control" value="0">
+                        <span class="input-group-addon">.00</span>
+                    </form>
+                </div>
+            </div>
+
+            <div class="page-header">
+                <h1>Backwaiters</h1>
+                <h3 class="float-right glyphicon glyphicon-chevron-up toggleBackwaiters" role="button" data-toggle="collapse" href="#backwaiter_container"
+                    aria-expanded="true" aria-controls="backwaiter_container"></h3>
+            </div>
+
+            <div id="backwaiter_container" class="collapse in"></div>
+        </div>
+
+        <div id="results-page">
+            <div class="jumbotron">
+                <p id="tip-pool"></p>
+                <p id="hour-pool"></p>
+                <p id="busser-hourly"></p>
+                <p id="left-over"></p>
+            </div>
+            <div id="busser-data"></div>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-default navbar-fixed-bottom text-center">
+        <button type="button" class="addField btn btn-default navbar-btn">Add Backwaiter</button>
+        <button type="button" class="calculate btn btn-default navbar-btn">Calculate Tips</button>
+        <button type="button" class="editData btn btn-default navbar-btn">Edit Data</button>
+    </nav>
+
+</body>
+
+</html>
